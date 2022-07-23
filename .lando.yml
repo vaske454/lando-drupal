@@ -1,0 +1,12 @@
+name: lando-drupal
+recipe: drupal9
+config:
+  webroot: web
+proxy:
+  mailhog:
+    - mail.lemp.lndo.site
+services:
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
